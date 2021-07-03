@@ -1,65 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
+
 body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  background: #343F4F;
-}
-.wrapper{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.wrapper .static-txt{
+
+.download-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download-btn{
+  position: relative;
+  background: #4285F4;
   color: #fff;
-  font-size: 60px;
+  width: 260px;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1.3em;
   font-weight: 400;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  transition: background 0.3s ease;
 }
-.wrapper .dynamic-txts{
-  margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden;
+
+.download-btn:hover{
+  background: #2874F3;
 }
-.dynamic-txts li{
-  list-style: none;
-  color: #FC6D6D;
-  font-size: 60px;
-  font-weight: 500;
-  position: relative;
-  top: 0;
-  animation: slide 12s steps(4) infinite;
+
+.download-btn i{
+  margin-left: 5px;
 }
-@keyframes slide {
-  100%{
-    top: -360px;
-  }
+
+.countdown{
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-.dynamic-txts li span{
-  position: relative;
-  margin: 5px 0;
-  line-height: 90px;
+
+.countdown span{
+  color: #0693F6;
+  font-size: 1.5em;
+  font-weight: 800;
 }
-.dynamic-txts li span::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #343F4F;
-  border-left: 2px solid #FC6D6D;
-  animation: typing 3s steps(10) infinite;
+
+.pleaseWait-text{
+  font-size: 1.1em;
+  font-weight: 600;
+  display: none;
 }
-@keyframes typing {
-  40%, 60%{
-    left: calc(100% + 30px);
-  }
-  100%{
-    left: 0;
-  }
+
+.manualDownload-text{
+  font-size: 1.1em;
+  font-weight: 600;
+  display: none;
+}
+
+.manualDownload-link{
+  color: #0693F6;
+  font-weight: 800;
+  text-decoration: none;
 }
